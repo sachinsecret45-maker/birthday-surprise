@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<script>
+
+const photos=[
+
+"images/photo1.jpg",
+"images/photo2.jpg",
+"images/photo3.jpg",
+"images/photo4.jpg",
+"images/photo5.jpg",
+"images/photo6.jpg",
+"images/photo7.jpg",
+"images/photo8.jpg"
+
+];
+
+const captions=[
+
+"One of my favourite memories ❤️",
+"Your smile is beautiful ✨",
+"Another special moment 🌸",
+"Always memorable 💖",
+"Thank you for these memories 🌷",
+"Happiness captured 📸",
+"One more unforgettable moment ❤️",
+"The journey continues ✨"
+
+];
+
+let current=0;
+
+function changePhoto(){
+
+current++;
+
+if(current>=photos.length){
+current=0;
+}
+
+document.getElementById("slideImage")
+.src=photos[current];
+
+document.getElementById("caption")
+.innerText=captions[current];
+
+}
+
+setInterval(changePhoto,3000);
+
+</script>
+<body>
+
+    <div class="hearts"></div>
+
+    <div class="container">
+
+        <h1 class="birthday-title">
+            
+            <span class="name">✨ A Little Surprise For You ✨</span>
+            
+        </h1>
+
+        <p class="subtitle">
+            A special movement  is waiting for you 💖
+        </p>
+
+        <div class="password-box">
+
+            <input
+              type="password"
+              id="password"
+             placeholder="DDMMYYYY (Eg: 07062008)">
+
+            <button onclick="checkPassword()">
+                Tap To Begin ✨
+            </button>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
