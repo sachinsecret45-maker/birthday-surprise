@@ -280,44 +280,61 @@ transform:scale(1);
 }
 @media screen and (max-width:768px){
 
-    .left-top{
-        left:10px;
-        top:140px;
-    }
-
-    .right-top{
-        right:10px;
-        top:140px;
-    }
-
-    .left-bottom{
-        left:10px;
-        bottom:120px;
-    }
-
-    .right-bottom{
-        right:10px;
-        bottom:120px;
-    }
-
     .polaroid{
-        width:90px;
-        padding:6px;
+        position:relative;
+        width:120px;
+        margin:15px auto;
+        left:auto !important;
+        right:auto !important;
+        top:auto !important;
+        bottom:auto !important;
+        transform:none !important;
+        animation:none;
     }
 
     .polaroid img{
         height:120px;
     }
 
-    .polaroid p{
-        font-size:14px;
+    .gallery{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .slideshow{
+        order:1;
+        width:100%;
+        margin-top:20px;
     }
 
     .slideshow img{
-        width:95%;
-        max-width:95%;
+        width:90%;
+        max-width:350px;
         height:auto;
         max-height:500px;
+    }
+
+    .left-top{
+        order:2;
+    }
+
+    .right-top{
+        order:3;
+    }
+
+    .left-bottom{
+        order:4;
+    }
+
+    .right-bottom{
+        order:5;
+    }
+
+    .next-surprise{
+        order:6;
+        margin-top:40px;
+        margin-bottom:80px;
     }
 
     .gallery h1{
@@ -327,11 +344,6 @@ transform:scale(1);
     .scroll-indicator{
         font-size:35px;
     }
-
-    .next-surprise{
-        margin-top:40px;
-    }
-
 }
 </style>
 
@@ -345,27 +357,6 @@ transform:scale(1);
 <p>💖 Cute Memory</p>
 
 </div>
-
-<div class="polaroid right-top">
-
-<img src="images/photo6.jpg">
-
-<p>✨ Beautiful Smile</p>
-
-</div>
-<div class="polaroid left-bottom">
-
-<img src="images/photo4.jpg">
-
-<p>🌸 Sweet Smile</p>
-
-</div>
-
-<div class="polaroid right-bottom">
-
-<img src="images/photo7.jpg">
-
-<p>❤️ Birthday Girl</p>
 
 </div>
 <audio id="bgmusic" loop>
@@ -394,6 +385,25 @@ One of my favourite memories ❤️
 ⬇️
 </div>
 
+</div>
+<div class="polaroid left-top">
+<img src="images/photo2.jpg">
+<p>💖 Cute Memory</p>
+</div>
+
+<div class="polaroid right-top">
+<img src="images/photo6.jpg">
+<p>✨ Beautiful Smile</p>
+</div>
+
+<div class="polaroid left-bottom">
+<img src="images/photo4.jpg">
+<p>🌸 Sweet Smile</p>
+</div>
+
+<div class="polaroid right-bottom">
+<img src="images/photo7.jpg">
+<p>❤️ Birthday Girl</p>
 </div>
 
 <div class="next-surprise"
