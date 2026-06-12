@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Classified Mission</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow:hidden;
+background:black;
+height:100vh;
+}
+
+video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+background:rgba(0,0,0,0.35);
+
+color:white;
+text-align:center;
+}
+
+h1{
+font-size:3rem;
+letter-spacing:4px;
+text-shadow:0 0 20px #000;
+animation:fadeIn 2s ease;
+}
+
+p{
+margin-top:15px;
+font-size:1.2rem;
+letter-spacing:2px;
+opacity:.9;
+animation:fadeIn 3s ease;
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.skip-btn{
+
+position:absolute;
+
+bottom:30px;
+right:30px;
+
+padding:12px 25px;
+
+border:none;
+border-radius:30px;
+
+background:#f9d71c;
+color:black;
+
+font-weight:bold;
+font-size:16px;
+
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:2rem;
+}
+
+p{
+font-size:1rem;
+padding:0 20px;
+}
+
+.skip-btn{
+bottom:20px;
+right:20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<video id="batmanVideo"
+autoplay
+muted
+playsinline>
+
+<source src="videos/batman.mp4" type="video/mp4">
+
+</video>
+
+<div class="overlay">
+
+<h1>🦇 CLASSIFIED MISSION 🦇</h1>
+
+<p>
+AUTHORIZED PERSONNEL ONLY
+</p>
+
+<button class="skip-btn"
+onclick="goNext()">
+
+Skip ▶
+
+</button>
+
+</div>
+
+<script>
+
+const video=
+document.getElementById("batmanVideo");
+
+video.onended=function(){
+
+goNext();
+
+}
+
+function goNext(){
+
+location.href="batman-message.html";
+
+}
+
+</script>
+
+</body>
+</html>

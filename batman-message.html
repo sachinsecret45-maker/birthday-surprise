@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Batman Mission</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(
+135deg,
+#000000,
+#0a192f,
+#111827
+);
+
+overflow:hidden;
+
+color:white;
+}
+
+.container{
+
+width:90%;
+max-width:700px;
+
+padding:40px;
+
+text-align:center;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+box-shadow:0 0 40px rgba(0,0,0,.5);
+
+}
+
+.logo{
+
+font-size:80px;
+
+margin-bottom:20px;
+
+animation:pulse 2s infinite;
+}
+
+.message{
+
+font-size:1.3rem;
+
+line-height:2;
+
+min-height:180px;
+
+margin-bottom:30px;
+}
+
+button{
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:30px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+background:#f9d71c;
+
+color:black;
+
+transition:.3s;
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.1);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+@media(max-width:768px){
+
+.logo{
+font-size:60px;
+}
+
+.message{
+font-size:1.1rem;
+}
+
+button{
+width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+🦇
+</div>
+
+<div class="message" id="typing">
+</div>
+
+<button onclick="location.href='index.html'">
+
+Continue Mission →
+
+</button>
+
+</div>
+
+<script>
+
+const text =
+
+`Batman says...
+
+The city is safe.
+
+But one secret mission remains.
+
+A very special birthday girl must unlock this secret vault.
+
+Only she knows the password. ❤️`;
+
+let i = 0;
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("typing").innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,40);
+
+}
+
+}
+
+typeWriter();
+
+</script>
+
+</body>
+
+</html>
